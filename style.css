@@ -71,6 +71,8 @@ main > section, main > article {
 }
 
 main > section.hero {
+  position:sticky;
+  top: 0px;
   height: 300px;
   background-image: url(https://picsum.photos/1920/1000);
   background-size: cover;
@@ -101,6 +103,12 @@ section.hero > button {
 
 main article {
   padding: 48px 96px;
+}
+
+main > article p::first-letter {
+    font-size: 70px;
+    color: black;
+    
 }
 
 main p {
