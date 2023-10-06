@@ -72,6 +72,7 @@ main > section, main > article {
 
 main > section.hero {
   position:sticky;
+  z-index: 1;
   top: 0px;
   height: 300px;
   background-image: url(https://picsum.photos/1920/1000);
@@ -106,14 +107,17 @@ main article {
 }
 
 main > article p::first-letter {
-    font-size: 70px;
+    font-size: 85px;
     color: black;
+    float: left;
+    margin: 0 .1em 0 0;
+    line-height: 105%;
     
 }
 
 main p {
   line-height: 1.75;
-  margin-bottom: 48px;;
+  margin-bottom: 48px;
 }
 
 main > article img {
@@ -150,14 +154,29 @@ span.tooltip:focus {
 span.tooltip:hover > span,
 span.tooltip:focus > span {
   display: inline;
+  position:absolute;
+  width: 300px;
+  bottom: 100%;
+  background-color: black;
+  margin-left: -150px;
+  left: 50%;
+  padding: 5px; 
 }
-
+ 
 /* styling for tooltip bubble */
 span.tooltip span {
-  display: none;
+  display:none;
+  position: absolute;
+  border-radius: 15px;
 }
 
 /* styling for tooltip bubble arrow */
 span.tooltip span::after {
-  content: "";
+  content: " ";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-color: solid black;
 }
