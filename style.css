@@ -178,5 +178,7 @@ span.tooltip span::after {
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
-  border-color: solid black;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  
 }
